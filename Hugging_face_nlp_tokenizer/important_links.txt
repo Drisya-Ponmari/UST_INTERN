@@ -4,3 +4,4 @@ https://huggingface.co/transformers/v1.2.0/main_classes/tokenizer.html
 https://huggingface.co/transformers/main_classes/tokenizer.html
 https://medium.com/huggingface
 https://medium.com/tensorflow/using-tensorflow-2-for-state-of-the-art-natural-language-processing-102445cda54a
+https://www.kaggle.com/debanga/huggingface-tokenizers-cheat-sheet/notebook

@@ -5,3 +5,12 @@ https://huggingface.co/transformers/main_classes/tokenizer.html
 https://medium.com/huggingface
 https://medium.com/tensorflow/using-tensorflow-2-for-state-of-the-art-natural-language-processing-102445cda54a
 https://www.kaggle.com/debanga/huggingface-tokenizers-cheat-sheet/notebook
+
+
+############Notebook
+https://nlp.stanford.edu/IR-book/html/htmledition/normalization-equivalence-classing-of-terms-1.html
+
+
+##Question answer model
+https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54
+https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507

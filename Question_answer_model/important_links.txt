@@ -1,0 +1,8 @@
+https://towardsdatascience.com/question-answering-with-bert-xlnet-xlm-and-distilbert-using-simple-transformers-4d8785ee762a
+
+https://towardsdatascience.com/deep-learning-question-answer-model-with-demo-e21e43f60dd5
+
+https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54
+
+##################Bidirectional Attention Flow for Machine Comprehension###################################
+https://arxiv.org/abs/1611.01603

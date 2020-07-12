@@ -9,3 +9,13 @@ https://arxiv.org/abs/1611.01603
 
 #############HUgging Face##############
 https://huggingface.co/transformers/model_doc/bert.html
+
+######################FINE TUNE WITH DIFFERENT DATASET##################
+https://qa.fastforwardlabs.com/pytorch/hugging%20face/wikipedia/bert/transformers/2020/05/19/Getting_Started_with_QA.html#1.-Pick-a-Model
+https://colab.research.google.com/github/fastforwardlabs/ff14_blog/blob/master/_notebooks/2020-05-19-Getting_Started_with_QA.ipynb#scrollTo=NBtzo0CU8tS8
+
+##########################################BertForQuestionAnswering (class in BERT transformer) ##############################
+https://colab.research.google.com/drive/1uSlWtJdZmLrI3FCNIlUHFxwAJiSu2J0-#scrollTo=-Mnv95sX-U9K
+
+https://colab.research.google.com/drive/1tTiOgJ7xvy3sjfiFC9OozbjAX1ho8WN9?usp=sharing#scrollTo=x0-oEGigjqUY
+

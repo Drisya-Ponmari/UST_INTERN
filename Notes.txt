@@ -1,0 +1,10 @@
+Create a virtual environment for python with conda
+--------------------------------------------------------
+1.conda -V
+2.conda update conda
+3.conda create -n yourenv python=x.x (to see available list of python versions conda serach "^python$")
+
+4.source activate yourenv
+
+//to remove : conda remove yourenv -all
+

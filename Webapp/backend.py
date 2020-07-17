@@ -3,6 +3,7 @@ from flasgger import Swagger
 from flask import Flask,request
 from transformers import BertForQuestionAnswering,BertTokenizer
 import torch
+import streamlit as st
 app=Flask(__name__)
 Swagger(app)
 
@@ -42,3 +43,6 @@ def Answering():
 	answer = ' '.join(tokens[answer_start:answer_end+1])
 
 	return answer.jsonify()
+
+if __name__ == "__main__":
+	app.run()

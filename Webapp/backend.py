@@ -2,7 +2,7 @@ import flasgger
 from flasgger import Swagger
 from flask import Flask,request
 from transformers import BertForQuestionAnswering,BertTokenizer
-
+import torch
 app=Flask(__name__)
 Swagger(app)
 

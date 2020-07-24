@@ -1,9 +1,8 @@
 import flasgger
 from flasgger import Swagger
 from flask import Flask,request
-from transformers import BertForQuestionAnswering,BertTokenizer
+from transformers import AutoTokenizer,AutoModelForQuestionAnswering
 import torch
-import streamlit as st
 app=Flask(__name__)
 Swagger(app)
 
@@ -12,15 +11,16 @@ def welcome():
 	return "Welcome People"
 
 #Extracting the input from the request
-@app.route('/answer',methods=["POST"])
+@app.route('/answer',methods=["GET","POST"])
 def Answering():
 	Inputs = request.get_json()
+	print(Inputs)
 	Question = Inputs['question']
 	Answer   = Inputs['context']
 
 	#model and tokeniser from Hugging face
-	model =  BertForQuestionAnswering.from_pretrained('bert-large-uncased-whole-word-masking-finetuned-squad')
-	tokenizer = BertTokenizer.from_pretrained('bert-large-uncased-whole-word-masking-finetuned-squad')
+	tokenizer =  AutoTokenizer.from_pretrained('deepset/bert-base-cased-squad2')
+	model = AutoModelForQuestionAnswering.from_pretrained('deepset/bert-base-cased-squad2')
 
 	
 	input_ids = tokeniser.encode(Question,Answer)
@@ -41,8 +41,13 @@ def Answering():
 	answer_end = torch.argmax(end_scores)
 
 	answer = ' '.join(tokens[answer_start:answer_end+1])
-
-	return answer.jsonify()
-
+	print(answer)
+	return {'Aswer':answer}
+@app.route('/test',methods=["GET","POST"])
+def Test():
+	print ("Runnig")
+	I = request.get_json()
+	print(I)
+	return {'data':1}
 if __name__ == "__main__":
 	app.run()

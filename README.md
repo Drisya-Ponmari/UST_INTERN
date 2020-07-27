@@ -54,6 +54,10 @@ answer = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))
 
 print(answer)
 ```
+
+## API
+
+Open API is available in SwaggerHub [click here](https://app.swaggerhub.com/apis/U671/Qaapi/1.0.0#/trial)
 ## Built With
 * Streamlit                : [The fastest way tobuild data apps](https://www.streamlit.io)
 * Flask                    : [Micro web framework](https://flask.palletsprojects.com/en/1.1.x/)

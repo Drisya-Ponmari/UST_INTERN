@@ -8,7 +8,7 @@ This repository deals with the details and information I have gained in working 
 ### Problem: 
 For each observation in the training set , we have a context,question and answer text
 The goal is to find the answer text for any new any new question and content provided.This is a closed dataset meaning that the answer to the questionis always a part of the context and also a continuos span of context.
-The model used here is the BertForQuestionAnswering which is trained on SQuAD dataset and the fine tuned model is saved in hugging face model hub under the name ponmari/QuestionAnweingBert
+The model used here is the [BertForQuestionAnswering](https://huggingface.co/transformers/model_doc/bert.html#bertforquestionanswering) which is trained on [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/) dataset and the fine tuned model is saved in hugging face model hub under the name ponmari/QuestionAnweingBert
 
 *All informations below mentioned is in the Webapp folder of the repo*
 
@@ -25,37 +25,8 @@ To run the webapp ,execute the bashscript file run.sh inside Webapp folder.
 
 
 ## Genaral Usage
-Pytorch models are available
-PyTorch and TF models are available
-​
-```python
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-​
-tokenizer = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")  
-model = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws")
-​
-sentence = "This is something which i cannot understand at all"
+[Pytorch model is available](https://huggingface.co/ponmari/QuestionAnsweingBert)
 
-text =  "paraphrase: " + sentence + " </s>"
-
-encoding = tokenizer.encode_plus(text,pad_to_max_length=True, return_tensors="pt")
-input_ids, attention_masks = encoding["input_ids"].to("cuda"), encoding["attention_mask"].to("cuda")
-
-
-outputs = model.generate(
-    input_ids=input_ids, attention_mask=attention_masks,
-    max_length=256,
-    do_sample=True,
-    top_k=200,
-    top_p=0.95,
-    early_stopping=True,
-    num_return_sequences=5
-)
-
-for output in outputs:
-    line = tokenizer.decode(output, skip_special_tokens=True,clean_up_tokenization_spaces=True)
-    print(line)
-```
 
 ```python
 from 'transformers' import 'AutoTokenizer', 'AutoModelForQuestionAnswering'
@@ -80,9 +51,9 @@ answer = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))
 print(answer)
 ```
 ## Built With
-* Streamlit 
-* Flask
-* Transformers-Huggingface
+* Streamlit                : [The fastest way tobuild data apps](https://www.streamlit.io)
+* Flask                    : [Micro web framework](https://flask.palletsprojects.com/en/1.1.x/)
+* Transformers-Huggingface :[click here](https://huggingface.co/transformers/)
 
 ## Authors
 * Drisya P
@@ -90,4 +61,3 @@ print(answer)
 ## Acknowledgments
 * Sampath Kethineedi
 * NLP TEAM UST GLOBAL ,Summer Intership 2020
-

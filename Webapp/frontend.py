@@ -11,7 +11,7 @@ def GetHTML():
 #Connecting to the server (flask api)
 def GetAnswer(Context,Question):
 	headers = {"content-type":"application/json"}
-	result = rq.post("http://d9af096e71bf.ngrok.io/answer",headers=headers,data=json.dumps({'question':Question,'context':Context}))
+	result = rq.post("http://127.0.0.1:5000/answer",headers=headers,data=json.dumps({'question':Question,'context':Context}))
 	data = result.json()
 	return data['Aswer']
 	

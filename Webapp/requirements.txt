@@ -1,0 +1,10 @@
+Libraries needed
+---------------------
+streamlit 
+requests
+json
+flasgger
+transformers
+flask
+
+Note you can install all the above using pip install command

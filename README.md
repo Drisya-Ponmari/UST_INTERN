@@ -57,7 +57,7 @@ for output in outputs:
     print(line)
 ```
 
-```
+```python
 from 'transformers' import 'AutoTokenizer', 'AutoModelForQuestionAnswering'
 tokenizer = AutoTokenizer.from_pretrained("ponmari/QuestionAnsweingBert")
 model = AutoModelForQuestionAnswering.from_pretrained("ponmari/QuestionAnsweingBert")
@@ -77,6 +77,7 @@ all_tokens = tokenizer.convert_ids_to_tokens(input_ids[0].tolist())
 answer_tokens = all_tokens[torch.argmax(start_scores) :torch.argmax(end_scores)+1]
 answer = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))
 
+print(answer)
 ```
 ## Built With
 * Streamlit 

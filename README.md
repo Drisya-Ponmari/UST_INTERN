@@ -25,7 +25,7 @@ To run the backend in google colab ,check [here] ()
 
 ### Result
 
-![Result]()
+![Result](Webapp/result.png)
 
 
 ## Genaral Usage

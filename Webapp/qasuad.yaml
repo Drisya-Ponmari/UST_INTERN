@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+  description: >-
+    For each observation in the training set , we have a context,question and
+    answer text The goal is to find the answer text for any new any new question
+    and content provided.This is a closed dataset meaning that the answer to the
+    questionis always a part of the context and also a continuos span of
+    context. The model used here is the BertForQuestionAnswering which is
+    trained on SQuAD dataset and the fine tuned model is saved in hugging face
+    model hub under the name ponmari/QuestionAnweingBert
+  version: 1.0.0
+  title: Question Answering
+  contact:
+    email: drisyaponmari@gmail.com
+tags:
+  - name: Streamlit
+paths:
+  /answer:
+    post:
+      tags:
+        - Answering
+      summary: Takes Context and Question to generate answer
+      description: 'Input is Context and Question,Output is the answer'
+      requestBody:
+        description: Question and Context
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                  description: Question
+                context:
+                  type: string
+                  description: Context from Question ansked
+              required:
+                - question
+                - context
+              example:
+                question: >-
+                  Huggingface has democratized NLP. Huge thanks to Huggingface
+                  for this.
+                context: What has Huggingface done ?
+      responses:
+        '200':
+          description: 'Answer generated, JSON object with answer returned'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  answer:
+                    type: string
+                    description: answer for the question
+                example:
+                  answer: democratized NLP
+        '400':
+          description: Invalid input
+      externalDocs:
+        description: >-
+          Learn more about the model used by the API for QuestionAnswering in
+          Hugging face Model hub
+        url: 'https://huggingface.co/ponmari/QuestionAnsweingBert'

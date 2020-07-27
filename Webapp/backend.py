@@ -1,10 +1,10 @@
-import flasgger
-from flasgger import Swagger
+#`import flasgger
+#from flasgger import Swagger
 from flask import Flask,request
 from transformers import AutoTokenizer,AutoModelForQuestionAnswering
 import torch
 app=Flask(__name__)
-Swagger(app)
+#Swagger(app)
 
 @app.route('/')
 def welcome():

@@ -13,12 +13,13 @@ The model used here is the [BertForQuestionAnswering](https://huggingface.co/tra
 *All informations below mentioned is in the Webapp folder of the repo*
 
 ### Prerequisite
-check requirements.txt and install it using pip command
-ex: pip intstall transformers
+
+check [requirements.txt](https://github.com/Drisya-Ponmari/UST_INTERN/blob/master/Webapp/requirements.txt) and install it using pip command
+ex: ``` pip intstall transformers ```
 
 
 ### Running the webapp
-To run the webapp ,execute the bashscript file run.sh inside Webapp folder.
+To run the webapp ,execute the bashscript file [run.sh](https://github.com/Drisya-Ponmari/UST_INTERN/blob/master/Webapp/run.sh) inside Webapp folder.
 
 ### Result
 //Animation

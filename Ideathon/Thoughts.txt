@@ -4,4 +4,6 @@ Summarisation of the content
 Repitition checking in Documents
 Question Creation for FAQS(from previous similar ideathons)
 Wikipedia article/Research paper suggestion from that area
+sentiment analysis in discussion forum
+Automatic translation to regional language(that expert or a contributor knows)
 

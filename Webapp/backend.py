@@ -22,6 +22,8 @@ def Answering():
 	tokenizer =  AutoTokenizer.from_pretrained('deepset/bert-base-cased-squad2')
 	model = AutoModelForQuestionAnswering.from_pretrained('deepset/bert-base-cased-squad2')
 
+	#Use model 'ponmari/QuestionAnsweingBert'
+
 	
 	input_ids = tokeniser.encode(Question,Answer)
 	

@@ -11,7 +11,7 @@ def GetHTML():
 #Connecting to the server (flask api)
 def GetAnswer(Context,Question):
 	headers = {"content-type":"application/json"}
-	result = rq.post("http://5560f8a3922d.ngrok.io/answer",headers=headers,data=json.dumps({'question':Question,'context':Context}))
+	result = rq.post("http://d9af096e71bf.ngrok.io/answer",headers=headers,data=json.dumps({'question':Question,'context':Context}))
 	data = result.json()
 	return data['Aswer']
 	
@@ -31,15 +31,18 @@ def main():
 	#Submitting the input and getting the answer
 		else:
 			Answer = GetAnswer(Context,Question)
-			st.write(Answer)
-			st.balloons()
+			if(Answer == "[CLS]" or Answer == "[SEP]"):
+				st.error("OOps ...Something wrong has happened")
+			else:
+				st.write(Answer)
+				st.balloons()
 
 def test():
 	st.write("hi")
 	Context="My name is Drisya"
 	Question="What's the name"
 	headers = {"content-type":"application/json"}
-	r = rq.post("http://b3ecabb6194b.ngrok.io/answer",headers=headers,data=json.dumps({'question':Question ,'context':Context}))
+	r = rq.post("http://127.0.0.1:5000/answer",headers=headers,data=json.dumps({'question':Question ,'context':Context}))
 
 	print(r)
 	data = r.json();

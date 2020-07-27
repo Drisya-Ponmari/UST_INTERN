@@ -19,10 +19,13 @@ ex: ``` pip intstall transformers ```
 
 
 ### Running the webapp
-To run the webapp ,execute the bashscript file [run.sh](https://github.com/Drisya-Ponmari/UST_INTERN/blob/master/Webapp/run.sh) inside Webapp folder.
+To run the webapp locally,execute the bashscript file [run.sh](https://github.com/Drisya-Ponmari/UST_INTERN/blob/master/Webapp/run.sh) inside Webapp folder.
+
+To run the backend in google colab ,check [here] ()
 
 ### Result
-//Animation
+
+![Result]()
 
 
 ## Genaral Usage

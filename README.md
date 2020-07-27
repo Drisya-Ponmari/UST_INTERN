@@ -29,7 +29,7 @@ Pytorch models are available
 
 
 ```
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering
+from 'transformers' import 'AutoTokenizer', 'AutoModelForQuestionAnswering'
 tokenizer = AutoTokenizer.from_pretrained("ponmari/QuestionAnsweingBert")
 model = AutoModelForQuestionAnswering.from_pretrained("ponmari/QuestionAnsweingBert")
 
